@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+Train Time
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<h1>Train Arrival Time</h1>
+<form action="/predict" method="post" >
+  <div class="row">
+    <label for="trainNo">Train Number</label>
+    <input type="text" name="train_no" autocomplete="off" placeholder="Train Number">
+  </div>
+  <div class="row">
+    <label for="date">Date</label>
+     <input type="date" value="dd/mm/yy", name="date">
+  </div>
+  <input type="submit" value="Predict" class="submit-btn">
+</form>
+
+
+{% endblock %}
